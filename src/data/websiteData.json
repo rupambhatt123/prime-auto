@@ -1,0 +1,329 @@
+{
+  "common": {
+    "logo": "/logo.png",
+    "siteNamePrimary": "PRIME",
+    "siteNameAccent": "AUTO",
+    "tagline": "CAR SERVICE & REPAIR",
+    "phone": "+1 000 000 000",
+    "phoneHref": "tel:+1000000000",
+    "email": "info@xyz.com",
+    "emailHref": "mailto:info@primeauto.com",
+    "address": "123 Main Street, New York, NY 10001, USA",
+    "addressHref": "https://maps.google.com/?q=123+Main+Street,+New+York,+NY+10001,+USA",
+    "followUsLabel": "Follow Us:",
+    "socialLinks": [
+      { "id": "facebook", "label": "Facebook", "icon": "facebook", "href": "https://www.facebook.com/" },
+      { "id": "twitter", "label": "Twitter", "icon": "twitter", "href": "https://x.com/" },
+      { "id": "instagram", "label": "Instagram", "icon": "instagram", "href": "https://www.instagram.com/" },
+      { "id": "linkedin", "label": "LinkedIn", "icon": "linkedin", "href": "https://www.linkedin.com/" },
+      { "id": "youtube", "label": "YouTube", "icon": "youtube", "href": "https://www.youtube.com/" }
+    ]
+  },
+  "categories": {
+    "Automotive": {
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "PrimeHeader1",
+            "Footer": "PrimeFooter1"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                { "key": "Banner", "component": "PrimeHero1" },
+                { "key": "About", "component": "PrimeAboutStats1" },
+                { "key": "Services", "component": "PrimeServices1" },
+                { "key": "WhyChooseUs", "component": "PrimeWhyChoose1" },
+                { "key": "Brands", "component": "PrimeBrands1" },
+                { "key": "Testimonials", "component": "PrimeTestimonials1" },
+                { "key": "ContactBanner", "component": "PrimeContactBanner1" },
+                { "key": "Booking", "component": "PrimeBooking1" }
+              ]
+            }
+          }
+        }
+      },
+      "sections": {
+        "Header": {
+          "variants": {
+            "PrimeHeader1": {
+              "logo": "/logo.png",
+              "homeHref": "#home",
+              "homeAriaLabel": "Prime Auto Logo",
+              "menuAriaLabel": "Toggle Menu",
+              "navLinks": [
+                { "label": "Home", "href": "#home", "id": "home" },
+                { "label": "About", "href": "#about", "id": "about" },
+                { "label": "Car Service", "href": "#services", "id": "services" },
+                { "label": "Why Choose Us", "href": "#why-choose-us", "id": "why-choose-us" },
+                { "label": "Brand", "href": "#brands", "id": "brands" },
+                { "label": "Testimonial", "href": "#testimonials", "id": "testimonials" },
+                { "label": "Contact Us", "href": "#contact", "id": "contact" }
+              ],
+              "ctaButton": {
+                "label": "Book Now",
+                "href": "#booking",
+                "id": "booking",
+                "icon": "calendar"
+              }
+            }
+          }
+        },
+        "Banner": {
+          "variants": {
+            "PrimeHero1": {
+              "sectionId": "home",
+              "image": "/hero.png",
+              "imageAlt": "Expert Car Service",
+              "eyebrow": "Welcome to Prime Auto!",
+              "titlePrefix": "Expert ",
+              "titleHighlight": "Car Service",
+              "subtitle": "For a smooth & safe drive",
+              "board": {
+                "ariaLabel": "Car Service List",
+                "titleLine1": "CAR",
+                "titleLine2": "SERVICE",
+                "icon": "wrench",
+                "items": [
+                  "Maintenance",
+                  "Repair",
+                  "Diagnostics",
+                  "AC Service",
+                  "Tyre & Wheel"
+                ]
+              }
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "PrimeAboutStats1": {
+              "sectionId": "about",
+              "badge": "About Us",
+              "titleLead": "Your Trusted Partner for",
+              "titleHighlight": "Car Service",
+              "description": "At Prime Auto, we are committed to delivering reliable, high-quality, and affordable automotive services for all car makes and models. With experienced technicians, advanced tools, and a customer-first approach, we ensure your vehicle gets the right care, better performance, and a longer life on the road.",
+              "statsBg": "/hero.png",
+              "stats": [
+                { "icon": "hardhat", "to": 320, "suffix": "+", "label": "Technicians" },
+                { "icon": "shieldCheck", "to": 100, "suffix": "%", "label": "Transparency" },
+                { "icon": "clipboardList", "to": 890, "suffix": "+", "label": "Done Projects" },
+                { "icon": "trophy", "to": 140, "suffix": "+", "label": "Won Awards" }
+              ]
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "PrimeServices1": {
+              "sectionId": "services",
+              "badge": "Our Services",
+              "titleLead": "Complete",
+              "titleHighlight": "Car Care",
+              "titleTail": "Services",
+              "subtitle": "A wide range of professional automotive services to keep your vehicle in top condition.",
+              "prevAriaLabel": "Previous service",
+              "nextAriaLabel": "Next service",
+              "goToAriaPrefix": "Go to",
+              "items": [
+                { "icon": "disc", "title": "Break Repair", "description": "Reliable brake inspection, repair and replacement for a safer drive." },
+                { "icon": "zap", "title": "Ignition Test", "description": "Complete ignition system checking and testing for smooth performance." },
+                { "icon": "droplets", "title": "Oil & Filters", "description": "High-quality engine oil and filter replacement to keep your engine healthy." },
+                { "icon": "cog", "title": "Engine Diagnostics", "description": "Advanced engine scanning and diagnostics to detect and fix issues early." },
+                { "icon": "wind", "title": "Exhaust Repair", "description": "Inspection and repair of exhaust systems for better performance and lower emissions." },
+                { "icon": "snowflake", "title": "A/C Recharge", "description": "Complete car A/C service, gas recharge, and performance check for a cooler ride." }
+              ]
+            }
+          }
+        },
+        "WhyChooseUs": {
+          "variants": {
+            "PrimeWhyChoose1": {
+              "sectionId": "why-choose-us",
+              "badge": "Why Choose Us",
+              "titleLine1": "Quality Service and",
+              "titleLine2Lead": "Customer",
+              "titleHighlight": "Satisfaction!",
+              "description": "We use advanced diagnostic tools and proven service methods to ensure your vehicle gets the best care, performance, and long-term reliability, with a strong focus on customer satisfaction.",
+              "reasons": [
+                "24-Month / 24,000 km Nationwide Warranty",
+                "Courtesy Local Shuttle Service",
+                "Customer Rewards Program",
+                "ASE Certified Technicians",
+                "24-Hour Roadside Assistance",
+                "Courtesy Loaner Vehicle"
+              ],
+              "image": "/a1.avif",
+              "imageAlt": "Mechanic tightening a car wheel",
+              "offer": {
+                "pre": "Save Up to",
+                "value": 25,
+                "valueSuffix": "% OFF",
+                "post": "on Car Repairs!",
+                "title": "Exclusive Service Offers",
+                "subtitle": "On Major Car Services"
+              }
+            }
+          }
+        },
+        "Brands": {
+          "variants": {
+            "PrimeBrands1": {
+              "sectionId": "brands",
+              "badge": "Our Brands",
+              "titleLead": "Trusted Car Brands We",
+              "titleHighlight": "Service",
+              "brands": [
+                { "name": "Nissan", "logo": "/nissan.webp" },
+                { "name": "Land Rover", "logo": "/landrover.webp" },
+                { "name": "BMW", "logo": "/bmw.webp" },
+                { "name": "KIA", "logo": "/kia.webp" },
+                { "name": "Lamborghini", "logo": "/lamborghini.webp" },
+                { "name": "Toyota", "logo": "/toyota.webp" },
+                { "name": "Porsche", "logo": "/porsche.webp" },
+                { "name": "Rolls-Royce", "logo": "/rolls.webp" },
+                { "name": "Ferrari", "logo": "/ferrari.webp" },
+                { "name": "Tesla", "logo": "/tesla.webp" }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "PrimeTestimonials1": {
+              "sectionId": "testimonials",
+              "badge": "Client Testimonials",
+              "titleLead": "What Our",
+              "titleHighlight": "Customers Say",
+              "subtitle": "Hear from our satisfied customers about their experience with our car service and support.",
+              "bgImage": "/hero.png",
+              "prevAriaLabel": "Previous testimonial",
+              "nextAriaLabel": "Next testimonial",
+              "reviews": [
+                {
+                  "quote": "Excellent service! The team was professional, honest, and completed my car servicing on time. My vehicle runs smoother than ever. Highly recommended!",
+                  "name": "A. Jonathan",
+                  "role": "Regular Customer",
+                  "avatar": "/h1.webp",
+                  "rating": 5
+                },
+                {
+                  "quote": "Great experience! Friendly staff, transparent pricing, and top-quality service. They really take care of your car like their own.",
+                  "name": "B. Alexander",
+                  "role": "Verified Customer",
+                  "avatar": "/h2.webp",
+                  "rating": 5
+                },
+                {
+                  "quote": "Quick diagnosis and a fair quote. They explained every repair before starting and my brakes feel brand new. I won't go anywhere else.",
+                  "name": "C. Michael",
+                  "role": "Regular Customer",
+                  "avatar": "/h3.webp",
+                  "rating": 5
+                },
+                {
+                  "quote": "The AC recharge was done in under an hour and the cabin has never been cooler. Honest advice and no unnecessary upsells.",
+                  "name": "D. Rahul",
+                  "role": "Verified Customer",
+                  "avatar": "/h4.webp",
+                  "rating": 5
+                },
+                {
+                  "quote": "From the pickup service to the final inspection, everything was smooth. The oil change and filter replacement were spot on.",
+                  "name": "E. Daniel",
+                  "role": "Regular Customer",
+                  "avatar": "/h1.webp",
+                  "rating": 5
+                },
+                {
+                  "quote": "Professional technicians and a spotless workshop. They fixed my exhaust issue the same day and the car sounds perfect.",
+                  "name": "F. Samuel",
+                  "role": "Verified Customer",
+                  "avatar": "/h3.webp",
+                  "rating": 5
+                }
+              ]
+            }
+          }
+        },
+        "ContactBanner": {
+          "variants": {
+            "PrimeContactBanner1": {
+              "sectionId": "contact",
+              "titleLine1": "Get in Touch With Us",
+              "titleLead": "For Your",
+              "titleHighlight": "Car Service Needs",
+              "description": "Have questions, need a service quote, or want to schedule an appointment? Our team is here to help you with quick and reliable support.",
+              "contacts": [
+                { "icon": "mail", "label": "Email Us", "valueKey": "email", "hrefKey": "emailHref" },
+                { "icon": "phone", "label": "Call Us", "valueKey": "phone", "hrefKey": "phoneHref" },
+                { "icon": "mapPin", "label": "Our Location", "valueKey": "address", "hrefKey": null }
+              ]
+            }
+          }
+        },
+        "Booking": {
+          "variants": {
+            "PrimeBooking1": {
+              "sectionId": "booking",
+              "badge": "Book Now",
+              "titleLine1": "Schedule Your",
+              "titleLead": "Car Service",
+              "titleHighlight": "Today",
+              "description": "Book your car service appointment online and let our expert technicians take care of your vehicle with quality and care.",
+              "features": [
+                { "icon": "calendar", "label": "Easy Online Booking" },
+                { "icon": "userCog", "label": "Certified Technicians" },
+                { "icon": "shieldCheck", "label": "Quality Service" }
+              ],
+              "carImage": "/car.webp",
+              "carAlt": "White sedan ready for service",
+              "formTitleLead": "Book a",
+              "formTitleHighlight": "Service",
+              "formSubtitle": "Fill out the form below to book your car service appointment.",
+              "times": ["09:00 AM", "11:00 AM", "02:00 PM", "04:00 PM"],
+              "placeholders": {
+                "name": "Your Name*",
+                "phone": "Phone Number*",
+                "email": "Email Address*",
+                "carModel": "Car Model*",
+                "preferredDate": "Preferred Date*",
+                "preferredTime": "Preferred Time*",
+                "serviceDetails": "Service Details (Optional)"
+              },
+              "submitLabel": "Book Now",
+              "sentLabel": "Request Sent!"
+            }
+          }
+        },
+       "Footer": {
+          "variants": {
+            "PrimeFooter1": {
+              "logo": "/logo1.png",
+              "contactHeadingLead": "Contact",
+              "contactHeadingTail": "Info",
+              "linksHeadingLead": "Quick",
+              "linksHeadingTail": "Links",
+              "about": "Your trusted partner for professional car care, maintenance and repair services with quality and reliability.",
+              "addressLines": ["123 Main Street,", "New York, NY 10001, USA"],
+              "linksCol1": [
+                { "label": "Home", "href": "#home" },
+                { "label": "About Us", "href": "#about" },
+                { "label": "Our Services", "href": "#services" },
+                { "label": "Why Choose Us", "href": "#why-choose-us" }
+              ],
+              "linksCol2": [
+                { "label": "Testimonials", "href": "#testimonials" },
+                { "label": "FAQs", "href": "#about" },
+                { "label": "Contact Us", "href": "#contact" },
+                { "label": "Book Now", "href": "#booking" }
+              ],
+              "copyrightYear": "2026",
+              "copyrightSuffix": ". All Rights Reserved."
+            }
+          }
+        }
+      }
+    }
+  }
+}
