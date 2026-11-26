@@ -193,10 +193,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="flex items-center justify-center gap-2.5 sm:gap-5"
+              className="flex items-center justify-center gap-2 sm:gap-4"
             >
               <motion.span
-                className="h-[2px] w-8 origin-right sm:w-24"
+                className="h-[2px] w-7 origin-right sm:w-16"
                 style={{ backgroundColor: ORANGE }}
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -204,13 +204,13 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               />
               <span
-                className="text-sm font-extrabold uppercase tracking-[0.2em] sm:text-2xl lg:text-3xl"
+                className="text-xs font-extrabold uppercase tracking-[0.2em] sm:text-xl sm:tracking-[0.25em]"
                 style={{ color: ORANGE }}
               >
                 {servicesData.badge}
               </span>
               <motion.span
-                className="h-[2px] w-8 origin-left sm:w-24"
+                className="h-[2px] w-7 origin-left sm:w-16"
                 style={{ backgroundColor: ORANGE }}
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}

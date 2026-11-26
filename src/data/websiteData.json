@@ -28,19 +28,19 @@
             "Footer": "PrimeFooter1"
           },
           "pages": {
-            "home": {
-              "components": [
-                { "key": "Banner", "component": "PrimeHero1" },
-                { "key": "About", "component": "PrimeAboutStats1" },
-                { "key": "Services", "component": "PrimeServices1" },
-                { "key": "WhyChooseUs", "component": "PrimeWhyChoose1" },
-                { "key": "Brands", "component": "PrimeBrands1" },
-                { "key": "Testimonials", "component": "PrimeTestimonials1" },
-                { "key": "ContactBanner", "component": "PrimeContactBanner1" },
-                { "key": "Booking", "component": "PrimeBooking1" }
-              ]
-            }
-          }
+  "home": {
+    "components": [
+      { "key": "Banner", "component": "PrimeHero1" },
+      { "key": "About", "component": "PrimeAboutStats1" },
+      { "key": "Services", "component": "PrimeServices1" },
+      { "key": "WhyChooseUs", "component": "PrimeWhyChoose1" },
+      { "key": "Brands", "component": "PrimeBrands1" },
+      { "key": "Testimonials", "component": "PrimeTestimonials1" },
+      { "key": "ContactBanner", "component": "PrimeContactBanner1" },
+      { "key": "Booking", "component": "PrimeBooking1" }
+    ]
+  }
+}
         }
       },
       "sections": {

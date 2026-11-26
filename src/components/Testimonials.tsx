@@ -40,40 +40,42 @@ function ReviewCard({
 }) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-2xl border border-white bg-white/95 shadow-lg shadow-slate-300/40 transition-transform duration-500 hover:-translate-y-1 sm:rounded-3xl ${
-        compact ? "px-3.5 pb-4 pt-2.5" : "px-5 pb-6 pt-3.5 sm:px-7 sm:pb-7 sm:pt-4"
+      className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white bg-white/95 shadow-lg shadow-slate-300/40 transition-transform duration-500 hover:-translate-y-1 sm:rounded-3xl ${
+        compact ? "px-4 pb-5 pt-4" : "px-5 pb-6 pt-5 sm:px-7 sm:pb-7 sm:pt-6"
       }`}
     >
-      <motion.span
-        aria-hidden
-        className={`block select-none font-black leading-none ${
-          compact ? "h-6 text-4xl" : "h-9 text-[3.5rem] sm:h-10 sm:text-[4rem]"
-        }`}
-        style={{ color: ORANGE }}
-        animate={{ scale: [1, 1.06, 1] }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: index * 0.6,
-        }}
-      >
-        “
-      </motion.span>
+      <div>
+        <motion.span
+          aria-hidden
+          className={`inline-block select-none font-black leading-[1.15] pt-1 ${
+            compact ? "text-3xl" : "text-4xl sm:text-5xl"
+          }`}
+          style={{ color: ORANGE }}
+          animate={{ scale: [1, 1.06, 1] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: index * 0.6,
+          }}
+        >
+          “
+        </motion.span>
 
-      <p
-        className={`${
-          compact
-            ? "mt-1.5 text-xs font-medium leading-[1.55] text-[#0A1128]"
-            : "mt-2 min-h-[4.5rem] text-sm font-medium leading-[1.6] text-[#0A1128] sm:text-base sm:leading-[1.65]"
-        }`}
-      >
-        {r.quote}
-      </p>
+        <p
+          className={`line-clamp-3 ${
+            compact
+              ? "mt-1 min-h-[3.6rem] text-xs font-medium leading-[1.55] text-[#0A1128]"
+              : "mt-1.5 min-h-[4.8rem] text-sm font-medium leading-[1.6] text-[#0A1128] sm:min-h-[5.25rem] sm:text-base sm:leading-[1.65]"
+          }`}
+        >
+          {r.quote}
+        </p>
+      </div>
 
       <div
         className={`flex items-center justify-between gap-2.5 ${
-          compact ? "mt-3" : "mt-4 sm:mt-5 sm:gap-3.5"
+          compact ? "mt-4" : "mt-5 sm:mt-6 sm:gap-3.5"
         }`}
       >
         <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
@@ -357,7 +359,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -40 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6"
+                className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:gap-6"
               >
                 {visible.map((r, i) => (
                   <ReviewCard key={r.name} r={r} index={i} />

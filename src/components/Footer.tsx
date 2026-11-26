@@ -85,7 +85,7 @@ function Gear({ className }: { className?: string }) {
     <svg viewBox="-30 -30 60 60" className={className} aria-hidden>
       <defs>
         <linearGradient id="gear-g" x1="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#FFB020" />
+          <stop offset="0" stopColor={ORANGE} />
           <stop offset="1" stopColor={ORANGE} />
         </linearGradient>
       </defs>
@@ -150,11 +150,11 @@ function Logo() {
         <span style={{ color: ORANGE }}>{common.siteNameAccent}</span>
       </p>
       <div className="mt-2 flex items-center gap-2 sm:gap-2.5">
-        <span className="h-[2px] w-6 sm:w-8" style={{ backgroundColor: "#FFB020" }} />
+        <span className="h-[2px] w-6 sm:w-8" style={{ backgroundColor: ORANGE }} />
         <span className="text-[9px] font-bold uppercase italic tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.22em]">
           {common.tagline}
         </span>
-        <span className="h-[2px] w-6 sm:w-8" style={{ backgroundColor: "#FFB020" }} />
+        <span className="h-[2px] w-6 sm:w-8" style={{ backgroundColor: ORANGE }} />
       </div>
     </div>
   );
@@ -169,7 +169,7 @@ function Heading({ lead, tail }: { lead: string; tail: string }) {
       <div className="mb-4 mt-2 flex items-center sm:mb-6 sm:mt-3">
         <motion.span
           className="h-1.5 w-12 origin-left rounded-full sm:w-14"
-          style={{ backgroundColor: "#FFB020" }}
+          style={{ backgroundColor: ORANGE }}
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}

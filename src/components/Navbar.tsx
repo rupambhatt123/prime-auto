@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, Calendar, Menu, X } from "lucide-react";
@@ -36,30 +36,76 @@ export default function Navbar() {
     headerData.navLinks[0]?.href ?? "#home"
   );
   const [logoError, setLogoError] = useState(false);
+  const manualTargetRef = useRef<string | null>(null);
+  const unlockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 140;
+    const computeActiveSection = () => {
+      if (manualTargetRef.current) {
+        return;
+      }
 
-      for (let i = ALL_SECTIONS.length - 1; i >= 0; i--) {
+      const headerEl = document.querySelector("header");
+      const headerHeight = headerEl ? headerEl.getBoundingClientRect().height : 120;
+      const scrollMarker = window.scrollY + headerHeight + 24;
+
+      let currentHref = ALL_SECTIONS[0] ?? "#home";
+
+      for (let i = 0; i < ALL_SECTIONS.length; i++) {
         const href = ALL_SECTIONS[i];
         const id = href.replace("#", "");
         const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveHref(href);
-          break;
+        if (!el) continue;
+
+        const elTop = el.getBoundingClientRect().top + window.scrollY;
+        if (elTop <= scrollMarker) {
+          currentHref = href;
         }
       }
+
+      setActiveHref(currentHref);
     };
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const releaseManualLockOnUserScroll = () => {
+      if (unlockTimerRef.current) {
+        clearTimeout(unlockTimerRef.current);
+      }
+      unlockTimerRef.current = setTimeout(() => {
+        manualTargetRef.current = null;
+        computeActiveSection();
+      }, 700);
+    };
+
+    computeActiveSection();
+    window.addEventListener("scroll", computeActiveSection, { passive: true });
+    window.addEventListener("wheel", releaseManualLockOnUserScroll, {
+      passive: true,
+    });
+    window.addEventListener("touchmove", releaseManualLockOnUserScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", computeActiveSection);
+      window.removeEventListener("wheel", releaseManualLockOnUserScroll);
+      window.removeEventListener("touchmove", releaseManualLockOnUserScroll);
+      if (unlockTimerRef.current) {
+        clearTimeout(unlockTimerRef.current);
+      }
+    };
   }, []);
 
   const handleNavClick = (href: string) => {
     setActiveHref(href);
     setMobileOpen(false);
+    manualTargetRef.current = href;
+
+    if (unlockTimerRef.current) {
+      clearTimeout(unlockTimerRef.current);
+    }
+    unlockTimerRef.current = setTimeout(() => {
+      manualTargetRef.current = null;
+    }, 900);
   };
 
   const isBookingActive = activeHref === headerData.ctaButton.href;
@@ -223,3 +269,4 @@ export default function Navbar() {
     </header>
   );
 }
+
